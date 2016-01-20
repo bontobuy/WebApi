@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using ECommerce.WebApi.App_Start;
 using Microsoft.Owin.Security.OAuth;
+using Microsoft.Practices.Unity;
 using Newtonsoft.Json.Serialization;
 
 namespace ECommerce.WebApi
@@ -16,6 +18,10 @@ namespace ECommerce.WebApi
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+
+            var container = UnityConfig.GetConfiguredContainer();
+            UnityConfig.RegisterTypes(container);
+            config.DependencyResolver = new UnityResolver(container);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
