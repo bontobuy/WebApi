@@ -45,21 +45,6 @@ namespace ECommerce.WebApi.Migrations
                     Name = "Galaxy"
                 }
                 );
-
-            context.SupplierDetails.AddOrUpdate(x => x.SupplierId,
-                new SupplierViewModel()
-                {
-                    SupplierId = 4,
-                    Name = "Leal",
-                    Website = "www.leal.mu",
-                },
-                 new SupplierViewModel()
-                {
-                    SupplierId = 5,
-                    Name = "Apex",
-                    Website = "www.apex.mu",
-                }
-                );
         }
     }
 }

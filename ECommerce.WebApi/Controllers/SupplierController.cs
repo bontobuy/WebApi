@@ -29,25 +29,5 @@ namespace ECommerce.WebApi.Controllers
                 return InternalServerError(ex);
             }
         }
-
-        [ResponseType(typeof(SupplierViewModel))]
-        public IHttpActionResult Get(int id)
-        {
-            try
-            {
-                if (id < 0)
-                    return BadRequest("id cannot be null");
-
-                SupplierViewModel item = _repository.Get(id);
-                if (item == null)
-                    return NotFound();
-
-                return Ok(item);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
-        }
     }
 }

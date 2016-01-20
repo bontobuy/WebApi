@@ -13,12 +13,5 @@ namespace ECommerce.WebApi.Models
 
             return records;
         }
-
-        public SupplierViewModel Get(int id)
-        {
-            var record = db.SupplierDetails.Find(id);
-
-            return record;
-        }
     }
 }
