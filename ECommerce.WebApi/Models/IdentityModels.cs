@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -13,6 +14,7 @@ namespace ECommerce.WebApi.Models
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
+
             // Add custom user claims here
             return userIdentity;
         }
@@ -24,10 +26,15 @@ namespace ECommerce.WebApi.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<SupplierSummaryViewModel> SupplierSummary { get; set; }
+        public DbSet<SupplierViewModel> SupplierDetails { get; set; }
+        public DbSet<ProductSummaryViewModel> Productsummary { get; set; }
+        public DbSet<ProductViewModel> ProductDetails { get; set; }
     }
 }
