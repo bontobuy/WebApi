@@ -9,5 +9,6 @@ namespace ECommerce.WebApi.Models
     public interface ISupplierRepo
     {
         IEnumerable<SupplierSummaryViewModel> Retrieve();
+        SupplierViewModel Get(int id);
     }
 }
