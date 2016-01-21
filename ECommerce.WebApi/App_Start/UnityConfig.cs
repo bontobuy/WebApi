@@ -39,7 +39,7 @@ namespace ECommerce.WebApi.App_Start
             // container.LoadConfiguration();
 
             // TODO: Register your types here
-            // container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterType<IProductRepo, ProductRepo>();
             container.RegisterType<ISupplierRepo, SupplierRepo>();
         }
     }
