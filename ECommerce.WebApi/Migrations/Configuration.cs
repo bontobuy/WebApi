@@ -45,6 +45,22 @@ namespace ECommerce.WebApi.Migrations
                     Name = "Galaxy"
                 }
                 );
+
+            context.ProductDetails.AddOrUpdate(x => x.ProductId,
+                new ProductViewModel()
+                {
+                    ProductId = 1,
+                    SupplierId = 2,
+                    Name = "Iphone 6S",
+                    Highlights = "Test"
+                },
+                new ProductViewModel()
+                {
+                    ProductId = 2,
+                    SupplierId = 3,
+                    Name = "Samsung S6",
+                    Highlights = "Phone"
+                });
         }
     }
 }
