@@ -255,6 +255,18 @@
     <Compile Include="Migrations\201601200329254_Add IdentityToSupplierAndProduct.Designer.cs">
       <DependentUpon>201601200329254_Add IdentityToSupplierAndProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601211745504_Add Computer,Appliance,Mobile,Fashion Product.cs" />
+    <Compile Include="Migrations\201601211745504_Add Computer,Appliance,Mobile,Fashion Product.Designer.cs">
+      <DependentUpon>201601211745504_Add Computer,Appliance,Mobile,Fashion Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601211754141_Add Brand.cs" />
+    <Compile Include="Migrations\201601211754141_Add Brand.Designer.cs">
+      <DependentUpon>201601211754141_Add Brand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601211755501_Change Brand Table Name.cs" />
+    <Compile Include="Migrations\201601211755501_Change Brand Table Name.Designer.cs">
+      <DependentUpon>201601211755501_Change Brand Table Name.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -263,6 +275,9 @@
     <Compile Include="Models\Interfaces\ISupplierRepo.cs" />
     <Compile Include="Models\Repositories\ProductRepo.cs" />
     <Compile Include="Models\Repositories\SupplierRepo.cs" />
+    <Compile Include="Models\ViewModels\BrandViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\ViewModels\ProductViewModel.cs" />
     <Compile Include="Models\ViewModels\SupplierViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -343,6 +358,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601200329254_Add IdentityToSupplierAndProduct.resx">
       <DependentUpon>201601200329254_Add IdentityToSupplierAndProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601211745504_Add Computer,Appliance,Mobile,Fashion Product.resx">
+      <DependentUpon>201601211745504_Add Computer,Appliance,Mobile,Fashion Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601211754141_Add Brand.resx">
+      <DependentUpon>201601211754141_Add Brand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601211755501_Change Brand Table Name.resx">
+      <DependentUpon>201601211755501_Change Brand Table Name.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

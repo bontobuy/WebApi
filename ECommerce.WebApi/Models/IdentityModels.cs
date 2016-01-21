@@ -36,5 +36,13 @@ namespace ECommerce.WebApi.Models
         public DbSet<SupplierViewModel> SupplierDetails { get; set; }
         public DbSet<ProductSummaryViewModel> Productsummary { get; set; }
         public DbSet<ProductViewModel> ProductDetails { get; set; }
+        public DbSet<BrandViewModel> BrandDetails { get; set; }
+
+        //public DbSet<RatingViewModel> RatingDetails { get; set; }
+        public DbSet<ProductComputerViewModel> ProductComputerDetails { get; set; }
+        public DbSet<ProductApplianceViewModel> ProductApplianceDetails { get; set; }
+        public DbSet<ProductMobileViewModel> ProductMobileDetails { get; set; }
+        public DbSet<ProductManFashionViewModel> ProductManFashionDetails { get; set; }
+        public DbSet<ProductWomanFashionViewModel> ProductWomanFashionDetails { get; set; }
     }
 }
